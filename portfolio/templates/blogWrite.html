@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}BlogPost{% endblock title %}
+{% block blogactive %}active{% endblock blogactive %}
+
+{% block body %}
+<div class="container">
+    <form method = "post" action = "/blogWrite" style="padding: 20px;">
+    {% csrf_token %}
+      
+      <div class="form-label-group">
+        <label for="title" style="margin: 7px; color: white; font-size: large;">Title</label>
+        <input type="text" id="title" name="title" class="form-control" placeholder="Title" required="" autofocus="" style="border: 4px solid #21f1ed;">
+      </div>
+
+      <div class="form-group-group">
+        <label for="content" style="margin: 7px; color: white; font-size: large;">Content</label>
+        <textarea class="form-control" name="content" id="content" name="content" cols="30" rows="6" style="border: 4px solid #21f1ed;"></textarea>
+      </div>
+
+      <div class="form-label-group">
+        <label for="author" style="margin: 7px; color: white; font-size: large;">Auther</label>
+        <input type="text" id="author" name="author" class="form-control" placeholder="author" required="" autofocus="" style="border: 4px solid #21f1ed;">
+      </div>
+
+      <div class="form-label-group">
+        <label for="slug" style="margin: 7px; color: white; font-size: large;">Slug</label>
+        <input type="text" id="slug" name="slug" class="form-control" placeholder="slug" required="" autofocus="" style="border: 4px solid #21f1ed;">
+      </div>
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin: 24px 0px;">Post</button>
+      <p class="mt-5 mb-3 text-muted text-center">© 2024-2025</p>
+    </form>
+</div>
+{% endblock body %}

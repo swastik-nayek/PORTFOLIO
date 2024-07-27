@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% block title %} home {% endblock title %}
+
+{% block body %}
+<style>
+    .main{
+    /*background-color: yellow;*/
+    width: 99vw;
+}
+
+.container{
+    display: flex;
+}
+.infocontainer{
+    /*background-color: rgb(125, 18, 104);*/
+    height: 53vh;
+    width: 80vw;
+    margin: 128px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.devinfo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 13px;
+    /*font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto Slab', serif;*/
+}
+
+.hello{
+    font-size: 76px;
+    color: yellow;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+.name{
+    font-size: 60px;
+    font-weight: bold;
+    color: #73e8ef;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.about{
+    font-size: 40px;
+    color: white;
+}
+.moreabout{
+    font-size: 29px;
+    margin-top: 20px;
+    color: white;
+}
+.button{
+    margin-top: 34px;
+}
+.button button{
+    padding: 9px 14px;
+    border-radius: 22px;
+    color:white;
+    background-color: rgb(35, 121, 149);
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.button button:hover{
+    background-color: white;
+    color: rgb(35, 121, 149);
+}
+
+.devpic img{
+    height: 65vh;
+    margin: -61px;
+}
+
+@media (max-width: 1200px){
+    .devpic{
+        display: none;
+    }
+}
+
+</style>
+
+
+<div class="container">
+    <div class="main">
+    <div class="infocontainer">
+        <div class="devinfo">
+            <div class="hello">Hi i am</div>
+            <div class="name">Swastik Nayek</div>
+            <div class="about">Student, Freshers</div>
+            <div class="moreabout">I love to draw any pic and love to explore in India</div>
+            <div class="button">
+                <a href="/static/cv1.pdf" download>
+                    <button> Download CV</button>
+                  </a>
+                <a href="/contact"><button>contact me</button></a>
+            </div>
+        </div>
+        <div class="devpic">
+            <img src="/static/iam.png" alt="swastik nayek">
+        </div>
+    </div>
+    </div>
+
+</div>
+<h1 style="margin: 52px 500px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(240, 120, 23); font-weight: bold;">My social media platform: </h1>
+  <div>
+    <div style="margin: 50px 625px;">
+      <a href="https://www.facebook.com/profile.php?id=100009807219664">
+        <img src="/static/face.png" alt="" width="78px" height="60px" style="margin-left: -45px;">
+      </a>
+      <a href="https://www.instagram.com/swastiknayek/">
+        <img src="/static/insta.webp" alt="" width="45px" height="45px" style="margin-left: 3px;">
+      </a>
+      <a href="https://github.com/swastik-nayek">
+        <img src="/static/git.png" alt="" width="64px" height="64px" style="margin-left: 4px;">
+      </a>
+      <a href="https://www.linkedin.com/in/swastik-nayek-b0030926a/">
+        <img src="/static/in.png" alt="" width="60px" height="60px" style="margin-left: -1px;">
+      </a>
+    </div>
+  </div>
+
+
+  {% endblock body %}

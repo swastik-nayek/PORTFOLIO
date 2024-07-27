@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}BlogPost{% endblock title %}
+{% block blogactive %}active{% endblock blogactive %}
+
+{% block body %}
+<div class="container my-3">
+    <h2 class="blog-post-title" style="color: white;">{{post.title}}</h2>
+    <p class="blog-post-meta" style="color: white;">{{post.timeStamp}} <a href="#"> by {{post.author}}</a></p>
+    <p style="color: white;">{{post.content}}</p>
+  </div>
+{% endblock body %}
